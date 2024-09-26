@@ -1,0 +1,120 @@
+/* Color Template - Soft Pastel Tones */
+:root {
+    --primary-bg: #F0E5CF; /* Light cream background */
+    --secondary-bg: #C8D5B9; /* Soft green background */
+    --accent-color: #E08D79; /* Soft coral */
+    --button-hover: #F49D6E; /* Lighter coral */
+    --text-color: #3B3B58; /* Dark muted purple */
+    --completed-bg: #94B49F; /* Soft olive green */
+    --delete-bg: #E05A47; /* Soft red */
+    --input-bg: #E9E5D6; /* Light beige input background */
+    --border-color: #DDCFCF; /* Soft border color */
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background-color: var(--primary-bg);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  h2, h3 {
+    font-size: 2em;
+    color: var(--text-color);
+  }
+  
+  #login-section, #bucketlist-section {
+    background-color: var(--secondary-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  input {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    width: 80%;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--input-bg);
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--accent-color);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: var(--button-hover);
+  }
+  
+  #error-message {
+    color: var(--delete-bg);
+    margin-top: 10px;
+  }
+  
+  .bucket-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .bucket-list li {
+    background-color: var(--input-bg);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slide-in 0.5s ease;
+  }
+  
+  .bucket-list li.completed {
+    text-decoration: line-through;
+    background-color: var(--completed-bg);
+    color: white;
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+  
+  @keyframes fadeIn {
+    100% { opacity: 1; }
+  }
+  
+  @keyframes slide-in {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  .completed-button {
+    background-color: var(--completed-bg);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .delete-button {
+    background-color: var(--delete-bg);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  

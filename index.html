@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Bucket List</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="login-section" class="fade-in">
+    <h2>Enter Password to Access Your Bucket List</h2>
+    <input type="password" id="password-input" placeholder="Enter Password">
+    <button onclick="checkPassword()">Submit</button>
+    <p id="error-message"></p>
+  </div>
+
+  <div id="bucketlist-section" class="fade-in" style="display: none;">
+    <h2>My Bucket List</h2>
+    <ul id="bucket-list" class="bucket-list"></ul>
+    <input type="text" id="new-item" placeholder="Add a new item">
+    <button onclick="addItem()">Add</button>
+    <h3>Completed Items</h3>
+    <ul id="completed-list" class="bucket-list"></ul>
+    <!-- <button onclick="resetBucketList()">Reset Bucket List</button> -->
+
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
